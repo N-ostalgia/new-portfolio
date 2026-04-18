@@ -82,23 +82,34 @@ export default function Projects() {
                           }}
                           style={{
                             position:"absolute",
-                            bottom:"12px",
+                            top:"12px",
                             right:"12px",
-                            zIndex:10,
+                            zIndex:20,               
                             background:"rgba(10,9,7,0.8)",
                             border:"1px solid var(--gold)",
                             color:"var(--gold)",
-                            padding:"4px 12px",
-                            fontSize:"10px",
-                            fontFamily:"'DM Mono',monospace",
+                            width:"25px",
+                            height:"25px",
+                            display:"flex",
+                            alignItems:"center",
+                            justifyContent:"center",
+                            fontSize:"18px",
+                            fontWeight:"bold",
                             cursor:"pointer",
-                            borderRadius:"2px",
-                            backdropFilter:"blur(4px)"
+                            borderRadius:"4px",
+                            backdropFilter:"blur(4px)",
+                            transition:"all 0.2s"
                           }}
-                          onMouseEnter={(e) => e.currentTarget.style.background = "var(--gold)"}
-                          onMouseLeave={(e) => e.currentTarget.style.background = "rgba(10,9,7,0.8)"}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = "var(--gold)";
+                            e.currentTarget.style.color = "var(--obs)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = "rgba(10,9,7,0.8)";
+                            e.currentTarget.style.color = "var(--gold)";
+                          }}
                         >
-                          ← Back to screenshot
+                          ←
                         </button>
                       </div>
                     )}
