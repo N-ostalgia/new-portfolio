@@ -6,7 +6,7 @@ export const PROJECTS = [
     tags:["Python","FastAPI","XGBoost","React","WebSockets","CICFlowMeter","tshark"],
     desc:"Real-time NIDS detecting 12+ attack types. XGBoost model served via FastAPI; React dashboard with WebSocket live monitoring.",
     github:"https://github.com/N-ostalgia/NIDS",
-    screenshot: "/src/assets/projects/nids.png",
+    screenshot: "/assets/projects/nids.png",
     demo:null,
   },
   {
@@ -16,7 +16,7 @@ export const PROJECTS = [
     tags:["JavaFX","Java","Greedy","A*","Genetic Algorithm","canvas", "animation","OpenStreetMap API", "Overpass API"],
     desc:"Desktop mapping app with optimised itinerary generation using Greedy, A*, and Genetic algorithms. Real-time 2D robot animation.",
     github:"https://github.com/N-ostalgia",
-    screenshot: "/src/assets/projects/poi.png",
+    screenshot: "/assets/projects/poi.png",
     demo:null,
   },
   {
@@ -26,7 +26,7 @@ export const PROJECTS = [
     tags:["ResNet50","Flask","React","Python","NumPy","Scikit-learn","OpenCV","cosinus similarity"],
     desc:"Image similarity search using ResNet50 feature extraction. Upload a product image, get visually similar results via Flask REST API.",
     github:"https://github.com/N-ostalgia",
-    screenshot: "/src/assets/projects/cbir.png",
+    screenshot: "/assets/projects/cbir.png",
     demo:null,
   },
   {
@@ -37,7 +37,7 @@ export const PROJECTS = [
     desc:"Cross-platform desktop app with real-time focus tracking (OpenCV), AI tips (Gemini API), Pomodoro timer, and gamified achievements.",
     github:"https://github.com/N-ostalgia",
     demo:null,
-    screenshot: "/src/assets/projects/studybuddy.png",
+    screenshot: "/assets/projects/studybuddy.png",
 
   },
   {
@@ -48,7 +48,7 @@ export const PROJECTS = [
     desc:"Web platform automating teaching unit assignments. Five-role auth, workload balancing, Excel import/export, and report generation.",
     github:"https://github.com/N-ostalgia/-Application-de-Gestion-des-Affectations-des-Enseignements-php",
     demo:null,
-    screenshot: "/src/assets/projects/teaching.png",
+    screenshot: "/assets/projects/teaching.png",
   },
   {
     id:"06", year:"2023",
@@ -57,7 +57,7 @@ export const PROJECTS = [
     tags:["C","SQLite","GCC","Makefile","Gnuplot"],
     desc:"Command-line banking in pure C with SQLite. Dual-role (Admin/Client), transaction engine, and Gnuplot chart output.",
     github:"https://github.com/N-ostalgia/C_Banking_System",
-    screenshot: "/src/assets/projects/banking.png",
+    screenshot: "/assets/projects/banking.png",
     demo:null,
   },
 ];
