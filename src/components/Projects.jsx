@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { PROJECTS } from "../data/projects";
+import FlowEnrollment from "./flows/FlowEnrollment";
+import FlowAIAssistant from "./flows/FlowAIAssistant";
+import FlowOCR from "./flows/FlowOCR";
 import FlowNIDS from "./flows/FlowNIDS";
 import FlowPOI from "./flows/FlowPOI";
 import FlowCBIR from "./flows/FlowCBIR";
@@ -7,7 +10,7 @@ import FlowStudyBuddy from "./flows/FlowStudyBuddy";
 import FlowTeaching from "./flows/FlowTeaching";
 import FlowBanking from "./flows/FlowBanking";
 
-const PROJECT_FLOWS = [FlowNIDS, FlowPOI, FlowCBIR, FlowStudyBuddy, FlowTeaching, FlowBanking];
+const PROJECT_FLOWS = [FlowEnrollment, FlowAIAssistant, FlowOCR, FlowNIDS, FlowPOI, FlowCBIR, FlowStudyBuddy, FlowTeaching, FlowBanking];
 
 export default function Projects() {
   const [showFlowFor, setShowFlowFor] = useState(null);
@@ -38,10 +41,10 @@ export default function Projects() {
                       position:"relative",
                       border:"1px solid rgba(201,150,58,.15)",
                       background:"var(--obs)",
-                      cursor: "pointer",
+                      cursor: FlowComponent && !isFlowVisible ? "pointer" : "default",
                       // No fixed padding – height is determined by content
                     }}
-                    onClick={() => !isFlowVisible && toggleFlow(p.id, true)}
+                    onClick={() => FlowComponent && !isFlowVisible && toggleFlow(p.id, true)}
                   >
                     {!isFlowVisible ? (
                       // Screenshot: image defines container height
@@ -67,7 +70,7 @@ export default function Projects() {
                           padding:"80px 20px",
                           textAlign:"center"
                         }}>
-                          ⚡ Click to see workflow
+                          {FlowComponent ? "Click to see workflow" : "Project preview coming soon"}
                         </div>
                       )
                     ) : (
@@ -121,17 +124,14 @@ export default function Projects() {
 
                 {/* Text column (unchanged) */}
                 <div style={{direction:"ltr"}}>
-                  <div className="fm" style={{fontSize:"9px",letterSpacing:".22em",color:"var(--muted)",textTransform:"uppercase",marginBottom:"14px"}}>{p.id} · {p.year}</div>
+                  <div className="fm" style={{fontSize:"9px",letterSpacing:".22em",color:"var(--muted)",textTransform:"uppercase",marginBottom:"14px"}}>{p.id}{p.year && ` · ${p.year}`}</div>
                   <h3 className="fd" style={{fontSize:"clamp(22px,3vw,36px)",fontWeight:400,fontStyle:"italic",color:"var(--ivory)",lineHeight:1.15,marginBottom:"8px"}}>{p.title}</h3>
                   <div className="fm" style={{fontSize:"9px",color:"var(--gold)",letterSpacing:".16em",textTransform:"uppercase",marginBottom:"16px"}}>{p.subtitle}</div>
                   <p style={{fontSize:"clamp(13px,1.35vw,15.5px)",lineHeight:1.78,color:"var(--cream)",marginBottom:"22px"}}>{p.desc}</p>
                   <div className="tags" style={{marginBottom:"26px"}}>{p.tags.map(t => <span key={t} className="sp">{t}</span>)}</div>
                   <div style={{display:"flex",alignItems:"center",gap:"12px",flexWrap:"wrap"}}>
-                    <a href={p.github} target="_blank" rel="noreferrer" className="bg" style={{fontSize:"10px",padding:"9px 22px"}}>GitHub ↗</a>
-                    {p.demo
-                      ? <a href={p.demo} target="_blank" rel="noreferrer" className="bf" style={{fontSize:"10px",padding:"9px 22px"}}>Live Demo →</a>
-                      : <span className="fm" style={{fontSize:"9px",color:"var(--muted)",letterSpacing:".08em",opacity:.5}}>Demo coming</span>
-                    }
+                    {p.github && <a href={p.github} target="_blank" rel="noreferrer" className="bg" style={{fontSize:"10px",padding:"9px 22px"}}>GitHub ↗</a>}
+                    {p.demo && <a href={p.demo} target="_blank" rel="noreferrer" className="bf" style={{fontSize:"10px",padding:"9px 22px"}}>Live Demo →</a>}
                   </div>
                 </div>
               </div>

@@ -3,9 +3,9 @@ import useTypewriter from "../hooks/useTypewriter";
 export default function Hero() {
   const tagline = useTypewriter([
     "Full stack developer",
-    "4th-year Computer Science Engineering student",
-    "Exploring AI, security & software engineering",
-    "Looking for a PFA internship · 2026",
+    "Final year Software Engineering student",
+    "Exploring Security , Cloud & Devops",
+    "Looking for a PFE internship · 2027",
   ]);
 
   return (
@@ -21,9 +21,9 @@ export default function Hero() {
           <span className="fd" style={{fontSize:"clamp(14px,1.8vw,19px)",color:"var(--cream)",fontStyle:"italic",fontWeight:300,lineHeight:1.6}}>{tagline}</span>
           <span style={{display:"inline-block",width:"2px",height:"1em",background:"var(--gold)",marginLeft:"3px",animation:"blink 1s step-end infinite",verticalAlign:"middle",flexShrink:0}}/>
         </div>
-        <div style={{display:"flex",gap:"12px",flexWrap:"wrap",opacity:0,animation:"fu .5s 1.1s forwards"}}>
-          <a href="#projects" className="bf">View Projects →</a>
-          <a href="#contact" className="bg">Get in Touch</a>
+        <div className="hero-actions" style={{display:"flex",gap:"12px",flexWrap:"wrap",opacity:0,animation:"fu .5s 1.1s forwards"}}>
+          <a href="#projects" className="bf hero-primary">View Projects →</a>
+          <a href="#contact" className="bg">Get in Touch ↓</a>
         </div>
       </div>
       <div style={{position:"absolute",bottom:"28px",right:"clamp(18px,5vw,60px)",display:"flex",flexDirection:"column",alignItems:"center",gap:"6px",opacity:0,animation:"fu .5s 1.3s forwards"}}>

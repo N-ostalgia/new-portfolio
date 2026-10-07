@@ -1,5 +1,4 @@
 import "./styles/global.css";
-import Cursor from "./components/Cursor";
 import ScrollProgress from "./components/ScrollProgress";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
@@ -20,7 +19,6 @@ export default function App() {
   return (
     <>
       <ScrollProgress />
-      <Cursor />
       <Nav scrolled={scrolled} />
       <main>
         <Hero />

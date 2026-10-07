@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useActiveSection from "../hooks/useActiveSection";
-import cvFile from "../assets/Aya_BOUIBAUAN_CV.pdf";   // <-- add this
+import cvFile from "../assets/Aya_BOUIBAUAN_CV.pdf";  
 
 export default function Nav({ scrolled }) {
   const [open, setOpen] = useState(false);

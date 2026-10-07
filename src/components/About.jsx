@@ -1,6 +1,6 @@
 import { useState } from "react";
 import myPhoto from "../assets/my_pecture.png";
-import cvFile from "../assets/Aya_BOUIBAUAN_CV.pdf";   // <-- import the CV
+import cvFile from "../assets/Aya_BOUIBAUAN_CV.pdf";   
 
 export default function About() {
   const [imgFailed, setImgFailed] = useState(false);
@@ -30,14 +30,18 @@ export default function About() {
               A developer who thinks<br/><span style={{color:"var(--gold)"}}>in systems,</span><br/>not just features.
             </h2>
             <p className="rv" style={{fontSize:"clamp(14.5px,1.6vw,17px)",lineHeight:1.8,color:"var(--cream)",marginBottom:"14px"}}>
-              4th-year Computer Science Engineering student at ENSAH, Morocco. I build full-stack systems: web platforms, desktop apps, and data-driven applications.
+              I'm a final-year Software Engineering student at ENSA Al Hoceima, focused on building reliable digital products across the stack, from backend services and APIs to clear, intuitive interfaces.
             </p>
             <p className="rv" style={{fontSize:"clamp(13.5px,1.45vw,15.5px)",lineHeight:1.8,color:"var(--muted)",marginBottom:"32px"}}>
-              I'm drawn to AI and cybersecurity and actively learning both — I've explored these areas through projects like a real-time NIDS and an ML-powered image search engine. Fluent in Arabic (native), French, and English.
+              At Accenov Technologies, I built Nexus, a 16-module collaborative e-learning platform. At XAI, I developed the React interface for X-Radar, a cross-platform network supervision app. My projects also span Spring Boot microservices, real-time machine-learning intrusion detection, and computer-vision search.
             </p>
-            <div className="rv" style={{display:"flex",gap:"12px",flexWrap:"wrap"}}>
+            <p className="rv" style={{fontSize:"clamp(13.5px,1.45vw,15.5px)",lineHeight:1.8,color:"var(--muted)",marginBottom:"32px"}}>
+              I'm seeking a 2027 PFE internship in software engineering or full-stack development. I'm especially interested in Ai, security, and scalable system design.
+            </p>
+            <div className="rv about-actions" style={{display:"flex",gap:"12px",flexWrap:"wrap"}}>
               <a href={cvFile} download className="bf">Download CV →</a>
               <a href="https://github.com/N-ostalgia" target="_blank" rel="noreferrer" className="bg">GitHub ↗</a>
+              <a href="#contact" className="bg">Get in touch ↓</a>
             </div>
           </div>
         </div>

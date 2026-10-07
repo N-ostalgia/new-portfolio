@@ -1,4 +1,4 @@
-import { CERTS, CERT_IMGS } from "../data/certifications";
+import { CERTS } from "../data/certifications";
 
 export default function Certs() {
   return (
@@ -11,8 +11,8 @@ export default function Certs() {
             <div key={i} className="rv cert-flip" style={{animationDelay:`${i*.07}s`,position:"relative",perspective:"900px",aspectRatio:"4/3"}}>
               <div className="cert-inner">
                 <div className="cert-front" style={{background:"var(--graph)",border:"1px solid rgba(201,150,58,.12)"}}>
-                  {CERT_IMGS[i] ? (
-                    <img src={CERT_IMGS[i]} alt={c.title} style={{width:"100%",height:"100%",objectFit:"fill"}}/>
+                  {c.image ? (
+                    <img src={c.image} alt={c.title} style={{width:"100%",height:"100%",objectFit:"fill"}}/>
                   ) : (
                     <div style={{position:"absolute",inset:0,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:"10px",padding:"20px",textAlign:"center"}}>
                       <div style={{width:"48px",height:"48px",border:"1px solid rgba(201,150,58,.25)",borderRadius:"50%",display:"flex",alignItems:"center",justifyContent:"center"}}>
